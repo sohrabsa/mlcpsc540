@@ -8,6 +8,16 @@ __CPSC 540__ - Project: __Emprical Comparison of Dirichlet Proecess Sampling Met
 
 Fall 2014
 
+[Current Project Report is here](docs/report/report.pdf)
+
+### Proposed Timeline
+* Nov 14 - data set found; papers read; Stat notes read; explore more sampling algorithm references
+* Nov 21 - implementation based around Chinese Restaurant Process
+* Nov 28 - implementation based around Stick Breaking
+* Dec 5 - comparison of the two, potential improvement iterations of each
+* Dec 12 - Write-up and documentation
+
+
 ### Introduction
 Our project proposal starts with an exploration of the highly referenced technical report, Neal’s [Markov Chain Sampling Methods for Dirichlet Process Mixture Models](http://www.stat.columbia.edu/npbayes/papers/neal_sampling.pdf) that compares different sampling methods for the Dirichlet Process. We were interested in looking more closely at a comparison of 2 sampling procedures derived from the representations of the *Dirichlet Process*, namely _Stick Breaking_ and the _Chinese Restaurant Process_.  
 
@@ -23,9 +33,3 @@ Requirement: A number of data sets across different fields or applications.
 
 Both approaches would require that we implement the representations and create our versions of the samplers, comparing the accuracy (or other performance measure(s)).  We will be setting our focus on a Depth-based approach.  Should it yield interesting results, we will explore the breadth based approach, time permitting.
 
-### Proposed Timeline
-* Nov 14 - data set found; papers read; Stat notes read; explore more sampling algorithm references
-* Nov 21 - implementation based around Chinese Restaurant Process
-* Nov 28 - implementation based around Stick Breaking
-* Dec 5 - comparison of the two, potential improvement iterations of each
-* Dec 12 - Write-up and documentation
