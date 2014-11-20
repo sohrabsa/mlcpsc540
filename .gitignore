@@ -45,3 +45,8 @@ notes
 .Rhistory
 testPatientData.txt
 basic_model.pdf
+
+# ignore reference pdf files
+dp_sampling_1_CRP.pdf
+dp_sampling_2_MCMC_for_DPMMs.pdf
+dp_sampling_3_gibbs_with_a_dp.pdf
