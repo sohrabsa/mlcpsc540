@@ -1,0 +1,93 @@
+\documentclass{article}
+\input{../macros/typesetting-macros}
+\input{../macros/basic-math-macros}
+\newcommand{\rightData}[1] {\hfill #1 \\}
+\newcommand{\bb}[1]{\textcolor{blue}{\textbf{#1}} }
+\newcommand{\br}[1]{\textcolor{red}{\textbf{#1}} }
+
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{color}
+\graphicspath{{../figures/}}
+
+\newcommand{\horrule}[1]{\noindent\rule{\linewidth}{#1}}
+
+\title{Project Report, CPSC-540}
+\author{
+Bita Nejat 45113115 \\
+Sohrab Salehi 86711132 \\
+Xi Laura Cang 40460024
+}
+%\date{September 2014}
+
+\begin{document}
+\maketitle
+
+% ----------------------------------------
+\section{Intro}
+% ----------------------------------------
+
+\subsection{Dirichlet Process Mixture Models}
+
+\begin{itemize}
+	\item brief description
+	\item Put PGM for DPMM
+\end{itemize}
+
+\subsection{Chinese Restaurant Process Representation}
+\begin{itemize}
+	\item brief description
+	\item hierarchical model
+	\item Sampling Algorithm Pseudocode \cite{neal2000markov}
+\end{itemize}
+
+\subsection{Stick Breaking Representation}
+
+\begin{itemize}
+	\item brief description
+	\item hierarchical model
+	\item Sampling Algorithm Pseudocode
+\end{itemize}
+
+% ----------------------------------------
+\section{Experiments}
+% ----------------------------------------
+
+\subsection{Synthetic Data}
+
+\subsection{Real Data}
+
+\subsection{Results}
+\begin{itemize}
+	\item describe clustering accuracy measures used
+	\item scatter clustering plot for CRP
+	\item scatter clustering plot for SBR
+\end{itemize}
+
+
+% ----------------------------------------
+\section{Discussion}
+% ----------------------------------------
+
+\subsection{Which one was better?}
+\subsection{Future Work}
+
+
+% ----------------------------------------
+% References
+% ----------------------------------------
+
+{\footnotesize
+\bibliography{ref}
+\bibliographystyle{unsrt}
+}
+
+% ----------------------------------------
+\section{Appendix}
+% ----------------------------------------
+
+
+\end{document}

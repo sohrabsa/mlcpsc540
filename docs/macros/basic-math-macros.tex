@@ -1,0 +1,79 @@
+\newcommand\bracearray[1]{\left\{ \begin{array}{l} #1 \end{array} \right.}
+\newcommand\bracearraypair[2]{\bracearray{#1 \\ #2}}
+\newcommand\bracearraytriple[3]{\bracearray{#1 \\ #2 \\ #3}}
+\newcommand\bracearrayquad[4]{\bracearray{#1 \\ #2 \\ #3 \\ #4}}
+\newcommand\dotprod[2]{\langle #1, #2\rangle}
+
+
+\newcommand\bracearraycond[1]{\left\{ \begin{array}{ll} #1 \end{array} \right.}
+
+\newcommand\partialderiv{\frac{\partial}{\partial \theta_i}}
+
+\def\Q{{\mathbb Q}}        % rationals
+\def\Z{{\mathbb Z}}        % integers
+\def\N{{\mathbb N}}        % naturals
+\def\M{{\mathbb M}}        % naturals
+\def\R{{\mathbb R}}        % reals
+\def\C{{\mathbb C}}      % complex
+\def\Cf{{\mathbf C}}     % continuous functions on (.)
+
+\def\P{{\mathbb P}}        % probability
+\def\E{{\mathbb E}}        % expectation 
+\def\1{{\mathbf 1}}        % indicator
+\def\var{{\mathop{\mathbf Var}}}    % variance
+
+\def\I{{\mathcal I}} % index set 
+
+\def\F{{\cal F}} % sigma-algebra
+
+\def\L{{\mathbf L}}     % L, as in L^2
+
+\def\ascv{\stackrel{\scriptscriptstyle a.s.}{\longrightarrow}}     % almost sure convergnece
+\def\pcv{\stackrel{\scriptscriptstyle \P}{\longrightarrow}}        % convergence in P
+\def\ltcv{\stackrel{\scriptscriptstyle\L^2}{\longrightarrow}}      % L2 convergnece
+\def\lpcv{\stackrel{\scriptscriptstyle\L^p}{\longrightarrow}}      % Lp convergnece
+\def\dcv{\stackrel{\scriptscriptstyle d}{\longrightarrow}}         % convergence in d
+\def\deq{\stackrel{\scriptscriptstyle d}{=}}         % equal in d
+\def\iidsim{\stackrel{\scriptscriptstyle \textrm{iid}}{\sim}}         % iid
+\def\toinf{\to \infty}
+
+\def\ci{\perp\!\!\!\perp}  % conditional independence
+
+
+
+% phylo macros
+\def\ver{{\mathscr V}}
+\def\edg{{\mathscr E}}
+\def\leaf{{\mathscr L}}
+\def\cdata{{\mathcal Y}}
+\def\edata{{\mathcal E}}
+\newcommand{\pa}[1]{\mathrm{pa}\left(#1\right)}
+\newcommand{\branch}[1]{\mathrm{b}\left(#1\right)}
+
+% distribution macros
+\newcommand{\bbinom}[1]{\mathrm{BetaBinomial}\left(#1\right)}
+\newcommand{\gammaDist}[1]{\mathrm{Gamma}\left(#1\right)}
+
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\newcommand\transp[1]{{#1}^{\textrm{T}}}
+
+
+\newcommand{\ud}{\,\mathrm{d}}
+
+\DeclareMathOperator{\dom}{dom}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+% \newenvironment{proof}{{\bf Proof:}}{\hfill\rule{2mm}{2mm}}
+\newenvironment{proofsketch}{{\bf Proof Sketch:}}{\hfill\rule{2mm}{2mm}}
+
+

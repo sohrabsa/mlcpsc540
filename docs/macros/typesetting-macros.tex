@@ -1,0 +1,51 @@
+\usepackage{textcomp,mathrsfs}
+\usepackage{graphicx,amssymb,amsmath,amsthm,mathrsfs}
+\usepackage{multirow,makeidx,algorithmic,algorithm}
+\usepackage{latexsym,graphicx,amssymb,amsmath,amsthm,mathrsfs}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{booktabs,fancyhdr} 
+\usepackage{rotating}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{stmaryrd}
+\usepackage{enumerate}
+%\usepackage[authoryear,comma,longnamesfirst,sectionbib]{natbib}
+\usepackage[numbers]{natbib}
+\usepackage{color}
+
+\usepackage[left=2.54cm,top=2cm,right=2cm,bottom=2.54cm]{geometry}
+
+
+% \usepackage[usenames,dvipsnames]{color}
+% \usepackage[frenchb]{babel}
+
+
+
+% This gives you control over how far down in the hierarchy the
+% table of contents will print.
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+ 
+\usepackage{url}
+%%%%% URL package fix %%%%%
+\begingroup
+\makeatletter
+\g@addto@macro{\UrlSpecials}{%
+  \endlinechar=13 \catcode\endlinechar=12
+  \do\%{\Url@percent}\do\^^M{\break}}
+ \catcode13=12 %
+ \gdef\Url@percent{\@ifnextchar^^M{\@gobble}{\mathbin{\mathchar`\%}}}%
+\endgroup %
+
+\makeindex 
+ 
+
+
+\graphicspath{{./graphics/},{./figures/}}
+
+\newcounter{xxx}
+\setcounter{xxx}{0}
+\newcommand\XXX[1]{{\color{red}{\bf \em \addtocounter{xxx}{1} (\thexxx) [[#1]]}}}
+
