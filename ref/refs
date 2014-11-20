@@ -1,3 +1,18 @@
 http://www.ece.sunysb.edu/~zyweng/dpcluster.html
 An implmentation of sampling for DPMM using CRP.
 
+http://xiaodong-yu.blogspot.ca/2009/09/gibbs-sampling-for-dp-mixtures.html
+Explanation of Neal's paper
+
+http://www.cc.gatech.edu/~jscholz6/resources/presentations//Tutorials%20&%20Presentations/Scholz,%20J.,%20(9-2-11)%20DP%20tutorial%20part%202%20(Pfunk%20Lab%20meeting).pdf
+Insightful representation of cluster analysis using DPMM and comparison to EM
+
+References for Chinese Restaurant Process:
+https://www.cs.princeton.edu/courses/archive/fall07/cos597C/scribe/20070921.pdf
+http://web.cse.ohio-state.edu/~kulis/teaching/788_sp12/scribe_notes/lecture13.pdf
+http://blog.datumbox.com/the-dirichlet-process-the-chinese-restaurant-process-and-other-representations/
+
+and a fast and intuition friendly (!) tutorial on all of these processes:
+http://blog.echen.me/2012/03/20/infinite-mixture-models-with-nonparametric-bayes-and-the-dirichlet-process/
+
+
