@@ -28,3 +28,8 @@ $ Z_i = \alpha f_{\bar{k}}(x_i) + \sum_{k=1}^K N_k^{-i} f_k(x_i)  $ and $ N_k^{-
 \STATE (4) $K \leftarrow K - \#\{ k : N_k == 0 \} $
 \end{algorithmic}
 \end{algorithm}
+
+Distribution values for a Dirichlet prior and multinomial likelihood:
+
+$$ f_k(x_i) = \frac{  c_k + a_k }{  \#\{ \text{data points in cluster k except for } x_i \} + \sum_k a_k }  $$
+$$ f_{\bar{k}}(x_i) = p(x_i | \lambda) = \int_{\Theta} f(x_i | \theta) h(\theta | \lambda) d \theta = \frac{ \Gamma(\sum \alpha_k) }{\Gamma(N + \sum \alpha_k)} \prod_{k=1}^K \frac{\Gamma(c_k + \alpha_k)}{\Gamma(\alpha_k)}  $$
