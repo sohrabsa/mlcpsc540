@@ -33,3 +33,9 @@ Requirement: A number of data sets across different fields or applications.
 
 Both approaches would require that we implement the representations and create our versions of the samplers, comparing the accuracy (or other performance measure(s)).  We will be setting our focus on a Depth-based approach.  Should it yield interesting results, we will explore the breadth based approach, time permitting.
 
+
+### breakdown of the job:
+* create synthetic data : use the two processes to generate data.
+* plotting
+* coding six algorithms ( for each strategy, code conjugate (which has two forms) and non-conjugate versions)
+* write (provide) code to measure clustering error
