@@ -1,6 +1,9 @@
 http://www.ece.sunysb.edu/~zyweng/dpcluster.html
 An implmentation of sampling for DPMM using CRP.
 
+http://cs.brown.edu/~sudderth/papers/sudderthPhD.pdf
+Chapter 2 of Sudderths PhD thesis has a good explanation for clustering via DPMMs and sampling strategies.
+
 http://xiaodong-yu.blogspot.ca/2009/09/gibbs-sampling-for-dp-mixtures.html
 Explanation of Neal's paper
 

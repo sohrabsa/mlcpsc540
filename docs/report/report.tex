@@ -11,6 +11,10 @@
 \usepackage{bbm}
 \usepackage{amsmath}
 \usepackage{color}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
 \graphicspath{{../figures/}}
 
 \newcommand{\horrule}[1]{\noindent\rule{\linewidth}{#1}}
@@ -53,7 +57,23 @@ $$  p(\eta_1, \eta_2, ..., \eta_N | y_1, y_2, ..., y_N) $$
 \subsection{Chinese Restaurant Process Representation}
 \begin{itemize}
 	\item brief description
-	\item hierarchical model
+	\item generative model
+	\item exact inference
+		\begin{itemize}
+			\item posterior distribution
+			\item predictive distribution
+		\end{itemize}
+	\item Sampling scheme
+		\begin{itemize}
+			\item Conjugate case
+			Gaussian-Gaussian mean /Gamma variance
+			Categorical data			
+			\begin{itemize}
+				\item Non-collapsed
+				\item Collapsed
+			\end{itemize}
+			\item Non-conjugate case
+		\end{itemize}
 	\item Sampling Algorithm Pseudocode \cite{neal2000markov}
 \end{itemize}
 
@@ -69,6 +89,11 @@ $$  p(\eta_1, \eta_2, ..., \eta_N | y_1, y_2, ..., y_N) $$
 % ----------------------------------------
 \section{Experiments}
 % ----------------------------------------
+
+\begin{itemize}
+	\item One-dimensional data
+	\item Higher dimensions
+\end{itemize}
 
 \subsection{Synthetic Data}
 
@@ -103,5 +128,31 @@ $$  p(\eta_1, \eta_2, ..., \eta_N | y_1, y_2, ..., y_N) $$
 \section{Appendix}
 % ----------------------------------------
 
+Sample new cluster assignments as follows:
+Question: Do we do steps a, b, c for each iteration (as written below) or do we run the for loop 3 separate times for each step?
+\begin{algorithm}
+\caption{Rao-Blackwellaized Gibbs Sampler for DPMMs CRP Representation \cite{Sudderth:aa}}
+\begin{algorithmic} 
+\REQUIRE $z^{t-1} \geq 0 \vee K current cluster statistics$ \\
+\STATE (1) $\phi\{1...N\} \sim perm(\{1...N\})$
+\STATE (2) $z^{t} \leftarrow z^{t-1} $
+\FOR { $ i \in \{\phi(1), \phi(2), ..., \phi(N)\} $ }
+\STATE (a)
+\FOR {each of the $K$ existing clusters, determine predictive likelihood}
+\STATE $f_{k}(x_i) = p(x_i | \{x_j | z_j = k, j \neq i\}, \lambda)$ 
+\ENDFOR
+\STATE $f_{\bar{k}}(x_i) = p(x_i | z_i = \bar{k}, z_{-i}, x_{-i}, \lambda) = p(x_i | \lambda)$ // reference in the text as how to calculate this
+\STATE (b) $z_i \sim \frac{1}{Z_i} (  \alpha f_{\bar{k}}(x_i) \delta(z_i, \bar{k}) + \sum_{k=1}^K N_k^{-i}  f_k(x_i) \delta(z_i, k) ) $ where \\
+$ Z_i = \alpha f_{\bar{k}}(x_i) + \sum_{k=1}^K N_k^{-i} f_k(x_i)  $ and $ N_k^{-i} = \# \{x_j : z_j = k\} $
+\STATE (c) Update cached sufficient statistics to reflect the assignment of $x_i$ to cluster $z_i$
+\IF{$z_i = \bar{k}$ }
+\STATE Create a new cluster
+\STATE $K \leftarrow K + 1$
+\ENDIF 
+\ENDFOR 
+\STATE (3) set $ z_t \leftarrow z$ // sample mixture parameters current clusters via step 3 of alg 2.1. \cite{Sudderth:aa}
+\STATE (4) $K \leftarrow K - \#\{ k : N_k == 0 \} $
+\end{algorithmic}
+\end{algorithm}
 
 \end{document}
