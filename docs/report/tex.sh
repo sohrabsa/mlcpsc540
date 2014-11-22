@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SUFFIX=.pdf
-for latexfile in `ls | grep .tex`
+for latexfile in `ls | grep report.tex`
   do
     base=`echo $latexfile | sed 's/.tex//'`
 
